@@ -1,0 +1,99 @@
+# Python-Challenge
+#    DAY 2 TEN CODING SOLUTIONS
+
+####  1. Remove a Character from String
+
+string1 = input("Enter a String: ")
+string2 = ""
+char = input("Enter a character to remove: ")
+for i in range(len(string1)):
+    if (string1[i] != char):
+        string2 = string2+string1[i]
+    else:
+        continue
+        
+print(string2)
+
+#### 2. COUNT OCCURENCES OF A CHARACTER IN A STRING
+
+string1 = input("Enter a String: ")
+char = input("Enter a character to count: ")
+count = 0
+for i in range(len(string1)):
+    if (string1[i] == char):
+        count = count + 1
+    
+print("The character ", char , "appeared for " , count , " times .")
+
+####  3. PALINDROME OR NOT
+
+string1 = input("Enter a String: ")
+if(string1==string1[::-1]):  
+      print("The given string is a palindrome")  
+else:  
+      print("The given string is not a palindrome")  
+
+#### 4. REVERSE A STRING
+
+string1 = input("Enter a String: ")
+print(string1[::-1])
+
+#### 5. VOWELS AND CONSONANTS
+
+ch = input("Enter a character: ")
+
+if(ch=='A' or ch=='a' or ch=='E' or ch =='e' or ch=='I'
+ or ch=='i' or ch=='O' or ch=='o' or ch=='U' or ch=='u'):
+    print(ch, "is a Vowel")
+else:
+    print(ch, "is a Consonant")
+
+#### 6. REPLACE A CHARACTER IN A STRING
+
+
+string = input("Enter a String: ")
+char1 = input("Enter character to be replaced:") 
+char2 = input("Enter a character to fill ")
+print(string.replace(char1, char2))
+
+#### 7. CONVERT LOWER CASE TO UPPER CASE
+
+string = input("Enter a String: ")
+print(string.upper()) 
+#use lower() to convert the string into lowercase 
+
+#### 8. PRINT REPEATING CHARACTER FROM A STRING
+
+String = input("Enter a String: ")
+for i in String:
+    count = 0
+    for j in String:
+        if i == j:
+            count+=1
+        if count > 1:
+            print(i,end = " ")
+            break
+
+#### 9. PRINTING NON REPEATING CHARACTERS IN A STRING
+
+String = input("Enter a String: ")
+for i in String:
+    count = 0
+    for j in String:
+        if i == j:
+            count+=1
+        if count > 1:
+            break
+    if count == 1:
+        print(i,end = " ")
+
+#### 10. SORT STRING IN ASCENDING AND DESCENDING ORDER
+
+string = input("Enter a String: ")
+print("Ascending Order")
+print(sorted(string))
+
+print("Descending Order")
+print(sorted(string , reverse = True))
+
+DONE FOR THE DAY !
